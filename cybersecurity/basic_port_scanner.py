@@ -1,3 +1,6 @@
+'''
+Very basic port scanner, lacks cross-platform support (only utilizes macOS and MAYBE linux commands)
+'''
 import os
 import platform
 import socket
