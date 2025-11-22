@@ -1,5 +1,5 @@
 # info:
-[MITRE ATT&CK](https://attack.mitre.org/): is a knowledge base of tactics and techniques for accesses systems. very useful for cybersecurity,
+[MITRE ATT&CK](https://attack.mitre.org/): is a knowledge base of tactics and techniques for accesses systems.
 
 # what's inside?:
 1. **Process Discovery T1057** - Cross-Platform script to find a list of processes & scan the output for applications
