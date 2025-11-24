@@ -1,4 +1,4 @@
 # about
 whatever piques my brain
 #### what's inside?:
-- very basic port scanner that shows mac addresses
+1. very basic port scanner that shows mac addresses
