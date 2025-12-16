@@ -1,0 +1,168 @@
+/*
+modified from https://github.com/amnweb/yasb-themes/tree/main/themes/d49a15b7-3ea1-4fd4-9fd4-3e8279c888a2
+for use with YASB
+
+todo: fix calendar & active window 
+*/
+* {
+	font-size: 12px;
+	font-weight: 600;
+	font-family: "JetBrainsMono NFP";
+	margin: 0;
+	padding: 0;
+    color: #a6abcc;
+}
+.yasb-bar {
+	padding: 0;
+	margin: 0;
+} 
+.widget {
+	background-color: #24273a;
+	padding: 0 4px;
+	margin: 0 4px;
+    border-radius: 12px;
+}
+.dark .widget {
+	background-color: #cad3f5;
+}
+.widget .label {
+	padding: 0px 2px; 
+}
+.widget .label.alt {
+	padding: 0px 8px;
+}
+.icon {
+	font-size: 16px;
+}
+
+.volume-widget .icon {
+	margin: 1px 2px 0 0;
+}
+.audio-menu {
+    background-color:#24273a80;
+    min-width: 300px;
+}
+.audio-menu .system-volume-container .volume-slider {
+    border: none;
+    
+}
+.audio-menu .audio-container .device {
+    background-color:transparent;
+    color: #cad3f5;
+    border: none;
+    padding:6px 8px 6px 4px;
+    margin: 2px 0;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.audio-menu .audio-container .device.selected {
+    background-color: rgba(255, 255, 255, 0.085);
+   
+}
+.audio-menu .audio-container .device:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.weather-widget,
+.volume-widget {
+    padding:0 6px;
+}
+.weather-widget .icon {
+	font-size: 16px;
+	margin: 0 2px 0px 0;
+}
+
+.taskbar-widget,
+.dark .taskbar-widget {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+}
+.taskbar-widget .app-container{
+    padding:0 6px;
+    border: none;
+    margin: 0;
+}
+.taskbar-widget .app-container .app-title {
+    padding-left: 4px;
+}
+.label,
+.icon {
+	color: #cad3f5
+}
+*.dark .label,
+*.dark .icon {
+	color: #292c3c
+}
+
+.home-widget {
+    padding: 0 8px 0 8px;
+	border-radius: 12px;   
+}
+.home-widget .widget-container {
+    background-color: #ffff;
+    border-radius: 8px;    
+}
+.home-widget .label {
+	font-weight: bold;
+}
+
+.home-menu {
+    background-color: #24273a80;
+}
+.home-menu .menu-item {
+    padding: 8px 48px 9px 16px;
+    font-size: 12px;
+    font-family: "JetBrainsMono NFP";
+    color: #cad3f5;
+    font-weight: 600;
+}
+.home-menu .menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.116);
+    color: #cad3f5;
+}
+.home-menu .separator {
+    max-height: 1px;
+    background-color: rgba(157, 180, 141, 0.116);
+}
+
+.systray {
+    background: #24273a;
+    border: none;
+    margin: 0;
+}
+.systray .unpinned-container {
+    background: #24273a;
+    border-radius: 8px;
+}
+.systray .pinned-container {
+    background: #24273a;
+}
+.systray .pinned-container[forceshow=true] {
+    background: rgb(55, 0, 255);
+}
+.systray .button {
+    border-radius: 4px;
+    padding: 2px 2px;
+}
+.systray .button:hover {
+    background: rgba(255, 255, 255, 0.116);
+}
+.systray .button[dragging=true] {
+    background: #cad3f5;
+    border-color: #486fff;
+}
+.systray .unpinned-visibility-btn {
+    border-radius: 4px;
+    height: 20px;
+    width: 16px;
+}
+.systray .unpinned-visibility-btn:checked {
+    background: rgba(255, 255, 255, 0.116);
+}
+.systray .unpinned-visibility-btn:hover {
+    border: 1px solid rgba(255, 255, 255, 0.116);
+    border-radius: 4px;
+    border-color: rgba(255, 255, 255, 0.116);
+}
