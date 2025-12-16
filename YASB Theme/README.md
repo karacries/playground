@@ -5,7 +5,7 @@
 
 ## Preview
 ![Preview of YASB top bar](https://i.imgur.com/YgidV8t.png)
-* note: not complete, i still have stuff i want to add
+note: not complete, i still have stuff i want to add
 
 
 ## Todo:
