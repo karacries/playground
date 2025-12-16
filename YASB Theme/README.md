@@ -13,5 +13,6 @@ note: not complete, i still have stuff i want to add
 1. add wifi widget
 2. add application volumes
 3. fix calendar css
-4. active window css
+4. fix active window css
 5. add media player
+6. fix context menu css
