@@ -1,0 +1,16 @@
+## YASB minimal modified
+* modified from [YASB Minimal](https://github.com/amnweb/yasb-themes/tree/main/themes/d49a15b7-3ea1-4fd4-9fd4-3e8279c888a2)
+* maybe this will help if someone stumbles upon this -> [icons](https://www.nerdfonts.com/cheat-sheet)
+* specifically for [YASB Reborn](https://github.com/amnweb/yasb)
+
+## Preview
+![Preview of YASB top bar](https://i.imgur.com/YgidV8t.png)
+* note: not complete, i still have stuff i want to add
+
+
+## Todo:
+1. add wifi widget
+2. add application volumes
+3. fix calendar css
+4. active window css
+5. add media player
