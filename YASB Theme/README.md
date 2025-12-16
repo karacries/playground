@@ -6,6 +6,8 @@ this is for my own personal use/storing it safe in case
 
 ## Preview
 ![Preview of YASB top bar](https://i.imgur.com/YgidV8t.png)
+<img src="https://i.imgur.com/nxT5qo1.png" width="200">
+
 note: not complete, i still have stuff i want to add
 
 
