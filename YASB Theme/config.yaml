@@ -2,7 +2,7 @@
 # for use with YASB
 # icons: https://www.nerdfonts.com/cheat-sheet
 
-# to add: wifi widget
+# todo: wifi widget; add application volumes
 watch_stylesheet: true
 watch_config: true
 debug: false
@@ -63,7 +63,7 @@ widgets:
       api_key: "$env:weather_api_key"
       update_interval: 1200 # Seconds
       hide_decimal: true
-      location: location
+      location: "Cedar Park"
       callbacks:
         on_left: "toggle_label"
   volume:
@@ -73,10 +73,10 @@ widgets:
       label_alt: "{volume}"
       volume_icons:
         - "\ueee8"  # muted
-        - "\uf026"  # 0-10%
-        - "\uf027"  # 11-30%
-        - "\uf027"  # 31-60%
-        - "\uf028"  # 61-100%
+        - "\uf026"  # 0-10% 
+        - "\uf027"  # 11-30% 
+        - "\uf027"  # 31-60% 
+        - "\uf028"  # 61-100% 
       callbacks:
         on_right: "exec cmd.exe /c start ms-settings:sound"
   home_menu:
@@ -85,9 +85,9 @@ widgets:
       label: "\ue62a"
       menu_list:
         - { title: "\ue617 C:/", path: "~" }
-        - { title: "\uf2df Menu Item", path: "Path"}
-        - { title: "\uf2df Menu Item", path: "Path"}
-        - { title: "\uf2df Menu Item", path: "Path"}
+        - { title: "\ue613 D:/", path: "D:\\"}
+        - { title: "\uf2df GDrive", path: "G:\\My Drive"}
+        - { title: "\ue7b8 Adobe CC", path: "D:\\my totally legal programs"}
         - { title: "\udb80\udd20 Downloads", path: "~\\Downloads" }
         - { title: "\udb80\ude1a Documents", path: "~\\Documents" }
         - { title: "\uf03e Pictures", path: "~\\Pictures" }
@@ -124,8 +124,8 @@ widgets:
       label_collapsed: "\uf005"
       label_expanded: "\uf41e"
       label_position: "right"
-      icon_size: 16
-      pin_click_modifier: "alt"
+      icon_size: 16 
+      pin_click_modifier: "alt" 
       show_unpinned: false
       show_unpinned_button: true
       show_battery: false
