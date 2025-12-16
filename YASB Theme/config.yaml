@@ -1,0 +1,138 @@
+# modified from https://github.com/amnweb/yasb-themes/tree/main/themes/d49a15b7-3ea1-4fd4-9fd4-3e8279c888a2
+# for use with YASB
+# icons: https://www.nerdfonts.com/cheat-sheet
+
+# to add: wifi widget
+watch_stylesheet: true
+watch_config: true
+debug: false
+bars:
+  primary-bar:
+    enabled: true
+    screens: ["*"] 
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      center: false
+    blur_effect:
+      enabled: false
+      acrylic: false
+      dark_mode: false
+      round_corners: false 
+      border_color: None 
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 24
+    padding:
+      top: 4
+      left: 4
+      bottom: 0
+      right: 4
+    widgets:
+      left:
+        ["home_menu","active_window"]
+      right: ["systray", "weather","taskbar","volume","clock"]
+widgets:
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      label: "{win[title]}"
+      label_alt: "exe='{win[process][name]}'"
+      label_no_window: ""
+      label_icon: true
+      label_icon_size: 14
+      max_length: 36
+      max_length_ellipsis: "..."
+      monitor_exclusive: true
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%a %b %d %H:%M%p}"
+      label_alt: "\uf017 {%H:%M%p %a}"
+      timezones: []
+    callbacks:
+      on_left: "toggle_label"
+  weather:
+    type: "yasb.weather.WeatherWidget"
+    options:
+      label: "<span>{icon}</span> {temp}"
+      label_alt: "{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}"
+      api_key: "$env:weather_api_key"
+      update_interval: 1200 # Seconds
+      hide_decimal: true
+      location: location
+      callbacks:
+        on_left: "toggle_label"
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "{volume}"
+      volume_icons:
+        - "\ueee8"  # muted
+        - "\uf026"  # 0-10%
+        - "\uf027"  # 11-30%
+        - "\uf027"  # 31-60%
+        - "\uf028"  # 61-100%
+      callbacks:
+        on_right: "exec cmd.exe /c start ms-settings:sound"
+  home_menu:
+    type: "yasb.home.HomeWidget"
+    options:
+      label: "\ue62a"
+      menu_list:
+        - { title: "\ue617 C:/", path: "~" }
+        - { title: "\uf2df Menu Item", path: "Path"}
+        - { title: "\uf2df Menu Item", path: "Path"}
+        - { title: "\uf2df Menu Item", path: "Path"}
+        - { title: "\udb80\udd20 Downloads", path: "~\\Downloads" }
+        - { title: "\udb80\ude1a Documents", path: "~\\Documents" }
+        - { title: "\uf03e Pictures", path: "~\\Pictures" }
+      menu_labels:
+        {"about": "\ue66A About This PC",
+        "system": "\uf423 System Settings",
+        "task_manager": "\uf437 Task Manager",
+        "shutdown": "\uf011 Shutdown",
+        "restart": "\uead2 Restart", 
+        "logout": "\U000f0343 Logout", 
+        "lock": "\uf023 Lock", 
+        "sleep": "\U000f0904 Sleep",
+        "hibernate": "\U000f04b2 Hibernate"
+        }
+      system_menu: true
+      power_menu: true
+      blur: true
+      border_color: "None"
+      round_corners_type: "small"
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      animation:
+        enabled: true
+      icon_size: 16
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: "\uf005"
+      label_expanded: "\uf41e"
+      label_position: "right"
+      icon_size: 16
+      pin_click_modifier: "alt"
+      show_unpinned: false
+      show_unpinned_button: true
+      show_battery: false
+      show_volume: true
+      show_network: true
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]
