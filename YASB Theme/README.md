@@ -6,15 +6,10 @@ this is for my own personal use/storing it safe in case
 
 ## Preview
 ![Preview of YASB top bar](https://i.imgur.com/YgidV8t.png)
-<img src="https://i.imgur.com/nxT5qo1.png" width="200">
+<img src="https://i.imgur.com/nxT5qo1.png" width="200"> <img src="https://i.imgur.com/m6m9N9l.png" width="300">
 
 note: not complete, i still have stuff i want to add
 
 
 ## Todo:
-1. add wifi widget
-2. add application volumes
-3. fix calendar css
-4. fix active window css
-5. add media player
-6. fix context menu css
+1. fix context menu css
