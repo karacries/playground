@@ -2,7 +2,7 @@
 # for use with YASB
 # icons: https://www.nerdfonts.com/cheat-sheet
 
-# todo: wifi widget; add application volumes
+# todo: 
 watch_stylesheet: true
 watch_config: true
 debug: false
@@ -34,7 +34,7 @@ bars:
     widgets:
       left:
         ["home_menu","active_window"]
-      right: ["systray", "weather","taskbar","volume","clock"]
+      right: ["systray", "weather","taskbar","wifi","volume","clock"]
 widgets:
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
@@ -136,3 +136,49 @@ widgets:
         color: "black"
         radius: 3
         offset: [ 1, 1 ]
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "<span>{wifi_icon}</span>"
+      label_alt: "{wifi_name} {wifi_strength}%"
+      update_interval: 5000
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "exec cmd.exe /c start ms-settings:network"
+        on_right: "toggle_label"
+      ethernet_label: "<span>{wifi_icon}</span>"
+      ethernet_label_alt: "<span>{wifi_icon}</span>{ip_addr}"
+      ethernet_icon: "\ueba9"
+      wifi_icons: [
+        "\udb82\udd2e",  # 0%
+        "\udb82\udd1f",  # 1-24% 
+        "\udb82\udd22",  # 25-49% 
+        "\udb82\udd25",  # 50-74% 
+        "\uf1eb"   # 75-100% 
+      ]
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]
+      menu_config:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "None"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        wifi_icons_secured: [
+          "\ue670",
+          "\ue671",
+          "\ue672",
+          "\ue673",
+        ]
+        wifi_icons_unsecured: [
+          "\uec3c",
+          "\uec3d",
+          "\uec3e",
+          "\uec3f",
+        ]
